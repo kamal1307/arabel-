@@ -1,0 +1,64 @@
+{
+    "station":
+    [
+     {
+     "name": "Arabel FM",
+     "streamURL": "https://arabelfm.ice.infomaniak.ch/arabelprodcastfm.mp3",
+     "desc": "Vivez la radio au pluriel !",
+     "longDesc": "Retrouver vos émissions variées : informatives, culturelles, sportives, musicales, spirituelles ou divertissantes. Par ailleurs, elles accordent une attention toute particulière à la dimension jeune et genre. La radio émet principalement en langue française (70%) mais aussi (30%) en arabe classique et dialectal et dans une moindre mesure en rifain. Retrouvez tout cela sur la fréquence 106.8 FM. Ayant pour objectif d’axer son contenu sur une plus grande ouverture entre les communautés arabophones et berbérophones et le public francophone."
+     }
+    ],
+    "programmation":
+    [
+        {
+            "name": "Fajr Arabel",
+            "time": "Mohamed Moundir – Du lundi au dimanche de 5 à 7h"
+        },
+      {
+            "name": "La Matinale",
+            "time": "Tarik Laabi – Du Lundi au Vendredi de 7h à 9h"
+        },
+        {
+            "name": "Cocktail Chamal",
+            "time": "Majdoulyne Nabhan – Du Lundi au vendredi de 11h à 12h"
+        },
+        {
+            "name": "L'Édition de la Rédaction",
+            "time": "Tarik Laabi – Du Lundi au Vendredi de 12h00 à 12h30"
+        },
+        {
+            "name": "Le carrefour de l'info",
+            "time": "Ahmed Cherif – Du Lundi au Vendredi de 16h00 à 17h00"
+        },
+        {
+            "name": "De tout pour faire un monde",
+            "time": "Darrez et Laure Fornier – Du lundi au vendredi de 16h à 18h"
+        },
+        {
+            "name": "Au coeur de la musique",
+            "time": "Jamal Fadil – Du Lundi au Vendredi de 20h à 22h"
+        },
+        {
+            "name": "Le Mag Éco",
+            "time": "Ahmed Cherif / Matthieu Morin – Mardi de 15h à 16h"
+        },
+        {
+            "name": "Orient Express",
+            "time": "Majdoulyne Nabhan –  Lundi de 15h00 à 16h00"
+        },
+        {
+            "name": "Va y avoir du sport",
+            "time":  "Jordi Garcia – Jeudi de 19h à 20h"
+        },
+        {
+            "name": "Le foot autrement",
+            "time": "Ahmed Cherif – Lundi de 18h00 à 20h00"
+        },
+        {
+            "name": "Ach Darlik",
+            "time": "Mohamed Chater – Du Lundi au Vendredi de 9h à 11h"
+        }
+
+]
+    
+}

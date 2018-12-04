@@ -7,21 +7,79 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8409829E219ADB3B00EC6CB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8409829B219ADB3B00EC6CB9 /* Assets.xcassets */; };
+		8409829F219ADB3B00EC6CB9 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409829C219ADB3B00EC6CB9 /* ContactViewController.swift */; };
+		840982AA219ADB8400EC6CB9 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840982A2219ADB8300EC6CB9 /* MenuTableViewCell.swift */; };
+		840982AB219ADB8400EC6CB9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840982A3219ADB8300EC6CB9 /* MenuViewController.swift */; };
+		840982AC219ADB8400EC6CB9 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840982A4219ADB8300EC6CB9 /* LiveViewController.swift */; };
+		840982AD219ADB8400EC6CB9 /* ProgrammationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840982A5219ADB8300EC6CB9 /* ProgrammationViewController.swift */; };
+		840982AF219ADB8400EC6CB9 /* PodcastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840982A8219ADB8300EC6CB9 /* PodcastViewController.swift */; };
+		840982B0219ADB8400EC6CB9 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840982A9219ADB8300EC6CB9 /* SWRevealViewController.m */; };
+		841AE00121B6AB76006C9BA5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841AE00021B6AB76006C9BA5 /* MessageUI.framework */; };
+		8426124021A5762A0022B0CD /* ProgammationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426123F21A5762A0022B0CD /* ProgammationCell.swift */; };
+		8426124421A57F3E0022B0CD /* RadioStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426124321A57F3E0022B0CD /* RadioStation.swift */; };
+		8426177521A3263800852B3C /* PodcastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426177421A3263800852B3C /* PodcastCell.swift */; };
+		842F76A721A6C08100FE95AC /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F76A621A6C08100FE95AC /* InfoViewController.swift */; };
+		842F76A921A6DA5100FE95AC /* stations.json in Resources */ = {isa = PBXBuildFile; fileRef = 842F76A821A6DA5100FE95AC /* stations.json */; };
+		8430D23121B14A660033D8E5 /* Programmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8430D23021B14A660033D8E5 /* Programmation.swift */; };
+		845C4AC121AEC9EF00BA4509 /* PodcastChaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C4AC021AEC9EF00BA4509 /* PodcastChaterViewController.swift */; };
+		845C4AC321AED7CB00BA4509 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845C4AC221AED7CB00BA4509 /* WebKit.framework */; };
+		845C4AC521AEF84700BA4509 /* MatinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C4AC421AEF84700BA4509 /* MatinalViewController.swift */; };
+		845C4AC721AEF86200BA4509 /* CocktailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C4AC621AEF86200BA4509 /* CocktailViewController.swift */; };
+		845C4AC921AEF87E00BA4509 /* RedactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C4AC821AEF87E00BA4509 /* RedactionViewController.swift */; };
+		845C4ACB21AEF89300BA4509 /* CarrefourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C4ACA21AEF89300BA4509 /* CarrefourViewController.swift */; };
+		845C4ACD21AEF8A400BA4509 /* MondeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C4ACC21AEF8A400BA4509 /* MondeViewController.swift */; };
+		845C4ACF21AEF8BF00BA4509 /* MagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C4ACE21AEF8BF00BA4509 /* MagViewController.swift */; };
+		845C4AD121AEF8D100BA4509 /* CoeurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C4AD021AEF8D100BA4509 /* CoeurViewController.swift */; };
+		845C4AD321AEF8EF00BA4509 /* OrientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C4AD221AEF8EF00BA4509 /* OrientViewController.swift */; };
+		845C4AD521AEF90000BA4509 /* SportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C4AD421AEF90000BA4509 /* SportViewController.swift */; };
+		845C4AD721AEF90B00BA4509 /* FootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C4AD621AEF90B00BA4509 /* FootViewController.swift */; };
+		845C4AD921AEF91C00BA4509 /* DarlikViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C4AD821AEF91C00BA4509 /* DarlikViewController.swift */; };
 		84B447E6215CBEC900658B62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B447E5215CBEC900658B62 /* AppDelegate.swift */; };
 		84B447E8215CBEC900658B62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B447E7215CBEC900658B62 /* ViewController.swift */; };
 		84B447EB215CBEC900658B62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B447E9215CBEC900658B62 /* Main.storyboard */; };
-		84B447ED215CBECB00658B62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B447EC215CBECB00658B62 /* Assets.xcassets */; };
 		84B447F0215CBECB00658B62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B447EE215CBECB00658B62 /* LaunchScreen.storyboard */; };
+		84D0A3EE21AD3C1C005F1115 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D0A3ED21AD3C1C005F1115 /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8409829B219ADB3B00EC6CB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8409829C219ADB3B00EC6CB9 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		840982A1219ADB8200EC6CB9 /* arabelFM1.0-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "arabelFM1.0-Bridging-Header.h"; sourceTree = "<group>"; };
+		840982A2219ADB8300EC6CB9 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		840982A3219ADB8300EC6CB9 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		840982A4219ADB8300EC6CB9 /* LiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
+		840982A5219ADB8300EC6CB9 /* ProgrammationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgrammationViewController.swift; sourceTree = "<group>"; };
+		840982A6219ADB8300EC6CB9 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		840982A8219ADB8300EC6CB9 /* PodcastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodcastViewController.swift; sourceTree = "<group>"; };
+		840982A9219ADB8300EC6CB9 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		841AE00021B6AB76006C9BA5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		8426123F21A5762A0022B0CD /* ProgammationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgammationCell.swift; sourceTree = "<group>"; };
+		8426124321A57F3E0022B0CD /* RadioStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioStation.swift; sourceTree = "<group>"; };
+		8426177421A3263800852B3C /* PodcastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastCell.swift; sourceTree = "<group>"; };
+		842F76A621A6C08100FE95AC /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		842F76A821A6DA5100FE95AC /* stations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stations.json; sourceTree = "<group>"; };
+		8430D23021B14A660033D8E5 /* Programmation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Programmation.swift; sourceTree = "<group>"; };
+		845C4AC021AEC9EF00BA4509 /* PodcastChaterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastChaterViewController.swift; sourceTree = "<group>"; };
+		845C4AC221AED7CB00BA4509 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		845C4AC421AEF84700BA4509 /* MatinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatinalViewController.swift; sourceTree = "<group>"; };
+		845C4AC621AEF86200BA4509 /* CocktailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailViewController.swift; sourceTree = "<group>"; };
+		845C4AC821AEF87E00BA4509 /* RedactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedactionViewController.swift; sourceTree = "<group>"; };
+		845C4ACA21AEF89300BA4509 /* CarrefourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrefourViewController.swift; sourceTree = "<group>"; };
+		845C4ACC21AEF8A400BA4509 /* MondeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MondeViewController.swift; sourceTree = "<group>"; };
+		845C4ACE21AEF8BF00BA4509 /* MagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagViewController.swift; sourceTree = "<group>"; };
+		845C4AD021AEF8D100BA4509 /* CoeurViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoeurViewController.swift; sourceTree = "<group>"; };
+		845C4AD221AEF8EF00BA4509 /* OrientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientViewController.swift; sourceTree = "<group>"; };
+		845C4AD421AEF90000BA4509 /* SportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportViewController.swift; sourceTree = "<group>"; };
+		845C4AD621AEF90B00BA4509 /* FootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootViewController.swift; sourceTree = "<group>"; };
+		845C4AD821AEF91C00BA4509 /* DarlikViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarlikViewController.swift; sourceTree = "<group>"; };
 		84B447E2215CBEC900658B62 /* arabelFM1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = arabelFM1.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B447E5215CBEC900658B62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84B447E7215CBEC900658B62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		84B447EA215CBEC900658B62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		84B447EC215CBECB00658B62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84B447EF215CBECB00658B62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84B447F1215CBECB00658B62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84D0A3ED21AD3C1C005F1115 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +87,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841AE00121B6AB76006C9BA5 /* MessageUI.framework in Frameworks */,
+				845C4AC321AED7CB00BA4509 /* WebKit.framework in Frameworks */,
+				84D0A3EE21AD3C1C005F1115 /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84065A6821A4536300CD3D36 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				8426123F21A5762A0022B0CD /* ProgammationCell.swift */,
+				8426177421A3263800852B3C /* PodcastCell.swift */,
+				840982A2219ADB8300EC6CB9 /* MenuTableViewCell.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		84065A6921A4538B00CD3D36 /* library */ = {
+			isa = PBXGroup;
+			children = (
+				840982A6219ADB8300EC6CB9 /* SWRevealViewController.h */,
+				840982A9219ADB8300EC6CB9 /* SWRevealViewController.m */,
+			);
+			path = library;
+			sourceTree = "<group>";
+		};
 		84B447D9215CBEC900658B62 = {
 			isa = PBXGroup;
 			children = (
 				84B447E4215CBEC900658B62 /* arabelFM1.0 */,
 				84B447E3215CBEC900658B62 /* Products */,
+				84D0A3EC21AD3C1B005F1115 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,11 +138,69 @@
 				84B447E5215CBEC900658B62 /* AppDelegate.swift */,
 				84B447E7215CBEC900658B62 /* ViewController.swift */,
 				84B447E9215CBEC900658B62 /* Main.storyboard */,
-				84B447EC215CBECB00658B62 /* Assets.xcassets */,
+				84D0A3EF21AD5E99005F1115 /* model */,
+				84065A6821A4536300CD3D36 /* cell */,
+				8409829B219ADB3B00EC6CB9 /* Assets.xcassets */,
+				84D0A3F021AD5EF3005F1115 /* view */,
+				84D0A3F121AD5F01005F1115 /* controller */,
+				84065A6921A4538B00CD3D36 /* library */,
 				84B447EE215CBECB00658B62 /* LaunchScreen.storyboard */,
+				840982A1219ADB8200EC6CB9 /* arabelFM1.0-Bridging-Header.h */,
 				84B447F1215CBECB00658B62 /* Info.plist */,
 			);
 			path = arabelFM1.0;
+			sourceTree = "<group>";
+		};
+		84D0A3EC21AD3C1B005F1115 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				841AE00021B6AB76006C9BA5 /* MessageUI.framework */,
+				845C4AC221AED7CB00BA4509 /* WebKit.framework */,
+				84D0A3ED21AD3C1C005F1115 /* MediaPlayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84D0A3EF21AD5E99005F1115 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				842F76A821A6DA5100FE95AC /* stations.json */,
+				8430D23021B14A660033D8E5 /* Programmation.swift */,
+				8426124321A57F3E0022B0CD /* RadioStation.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		84D0A3F021AD5EF3005F1115 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				845C4AC421AEF84700BA4509 /* MatinalViewController.swift */,
+				845C4AC621AEF86200BA4509 /* CocktailViewController.swift */,
+				845C4AC821AEF87E00BA4509 /* RedactionViewController.swift */,
+				845C4ACA21AEF89300BA4509 /* CarrefourViewController.swift */,
+				845C4ACC21AEF8A400BA4509 /* MondeViewController.swift */,
+				845C4ACE21AEF8BF00BA4509 /* MagViewController.swift */,
+				845C4AD021AEF8D100BA4509 /* CoeurViewController.swift */,
+				845C4AD221AEF8EF00BA4509 /* OrientViewController.swift */,
+				845C4AD421AEF90000BA4509 /* SportViewController.swift */,
+				845C4AD621AEF90B00BA4509 /* FootViewController.swift */,
+				845C4AD821AEF91C00BA4509 /* DarlikViewController.swift */,
+				845C4AC021AEC9EF00BA4509 /* PodcastChaterViewController.swift */,
+				8409829C219ADB3B00EC6CB9 /* ContactViewController.swift */,
+				840982A4219ADB8300EC6CB9 /* LiveViewController.swift */,
+				840982A8219ADB8300EC6CB9 /* PodcastViewController.swift */,
+				842F76A621A6C08100FE95AC /* InfoViewController.swift */,
+				840982A5219ADB8300EC6CB9 /* ProgrammationViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		84D0A3F121AD5F01005F1115 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				840982A3219ADB8300EC6CB9 /* MenuViewController.swift */,
+			);
+			path = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +235,7 @@
 				TargetAttributes = {
 					84B447E1215CBEC900658B62 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -123,7 +263,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				84B447F0215CBECB00658B62 /* LaunchScreen.storyboard in Resources */,
-				84B447ED215CBECB00658B62 /* Assets.xcassets in Resources */,
+				8409829E219ADB3B00EC6CB9 /* Assets.xcassets in Resources */,
+				842F76A921A6DA5100FE95AC /* stations.json in Resources */,
 				84B447EB215CBEC900658B62 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +276,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845C4AC721AEF86200BA4509 /* CocktailViewController.swift in Sources */,
 				84B447E8215CBEC900658B62 /* ViewController.swift in Sources */,
+				840982AB219ADB8400EC6CB9 /* MenuViewController.swift in Sources */,
+				845C4AC921AEF87E00BA4509 /* RedactionViewController.swift in Sources */,
+				8426177521A3263800852B3C /* PodcastCell.swift in Sources */,
+				8426124021A5762A0022B0CD /* ProgammationCell.swift in Sources */,
 				84B447E6215CBEC900658B62 /* AppDelegate.swift in Sources */,
+				840982AF219ADB8400EC6CB9 /* PodcastViewController.swift in Sources */,
+				840982AA219ADB8400EC6CB9 /* MenuTableViewCell.swift in Sources */,
+				8426124421A57F3E0022B0CD /* RadioStation.swift in Sources */,
+				840982B0219ADB8400EC6CB9 /* SWRevealViewController.m in Sources */,
+				845C4ACD21AEF8A400BA4509 /* MondeViewController.swift in Sources */,
+				845C4AC521AEF84700BA4509 /* MatinalViewController.swift in Sources */,
+				845C4ACB21AEF89300BA4509 /* CarrefourViewController.swift in Sources */,
+				842F76A721A6C08100FE95AC /* InfoViewController.swift in Sources */,
+				845C4AC121AEC9EF00BA4509 /* PodcastChaterViewController.swift in Sources */,
+				840982AC219ADB8400EC6CB9 /* LiveViewController.swift in Sources */,
+				845C4AD921AEF91C00BA4509 /* DarlikViewController.swift in Sources */,
+				8409829F219ADB3B00EC6CB9 /* ContactViewController.swift in Sources */,
+				845C4AD721AEF90B00BA4509 /* FootViewController.swift in Sources */,
+				845C4ACF21AEF8BF00BA4509 /* MagViewController.swift in Sources */,
+				845C4AD121AEF8D100BA4509 /* CoeurViewController.swift in Sources */,
+				8430D23121B14A660033D8E5 /* Programmation.swift in Sources */,
+				840982AD219ADB8400EC6CB9 /* ProgrammationViewController.swift in Sources */,
+				845C4AD521AEF90000BA4509 /* SportViewController.swift in Sources */,
+				845C4AD321AEF8EF00BA4509 /* OrientViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +447,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 64769A2F3R;
 				INFOPLIST_FILE = arabelFM1.0/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -290,6 +457,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kamalKayani.arabelFM1-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "arabelFM1.0/arabelFM1.0-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -299,7 +468,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 64769A2F3R;
 				INFOPLIST_FILE = arabelFM1.0/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -307,6 +478,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kamalKayani.arabelFM1-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "arabelFM1.0/arabelFM1.0-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
