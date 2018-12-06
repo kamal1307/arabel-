@@ -35,6 +35,7 @@
 		845C4AD521AEF90000BA4509 /* SportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C4AD421AEF90000BA4509 /* SportViewController.swift */; };
 		845C4AD721AEF90B00BA4509 /* FootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C4AD621AEF90B00BA4509 /* FootViewController.swift */; };
 		845C4AD921AEF91C00BA4509 /* DarlikViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C4AD821AEF91C00BA4509 /* DarlikViewController.swift */; };
+		847F05CA21B6EF800049E4B9 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847F05C921B6EF800049E4B9 /* iAd.framework */; };
 		84B447E6215CBEC900658B62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B447E5215CBEC900658B62 /* AppDelegate.swift */; };
 		84B447E8215CBEC900658B62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B447E7215CBEC900658B62 /* ViewController.swift */; };
 		84B447EB215CBEC900658B62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B447E9215CBEC900658B62 /* Main.storyboard */; };
@@ -73,6 +74,7 @@
 		845C4AD421AEF90000BA4509 /* SportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportViewController.swift; sourceTree = "<group>"; };
 		845C4AD621AEF90B00BA4509 /* FootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootViewController.swift; sourceTree = "<group>"; };
 		845C4AD821AEF91C00BA4509 /* DarlikViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarlikViewController.swift; sourceTree = "<group>"; };
+		847F05C921B6EF800049E4B9 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		84B447E2215CBEC900658B62 /* arabelFM1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = arabelFM1.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B447E5215CBEC900658B62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84B447E7215CBEC900658B62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				847F05CA21B6EF800049E4B9 /* iAd.framework in Frameworks */,
 				841AE00121B6AB76006C9BA5 /* MessageUI.framework in Frameworks */,
 				845C4AC321AED7CB00BA4509 /* WebKit.framework in Frameworks */,
 				84D0A3EE21AD3C1C005F1115 /* MediaPlayer.framework in Frameworks */,
@@ -154,6 +157,7 @@
 		84D0A3EC21AD3C1B005F1115 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				847F05C921B6EF800049E4B9 /* iAd.framework */,
 				841AE00021B6AB76006C9BA5 /* MessageUI.framework */,
 				845C4AC221AED7CB00BA4509 /* WebKit.framework */,
 				84D0A3ED21AD3C1C005F1115 /* MediaPlayer.framework */,
