@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:arabelFM1.0.xcodeproj">
+      location = "group:/Users/amdin/Desktop/backup arabel MaJ/arabelFM1.0/view/CoeurViewController.swift">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
