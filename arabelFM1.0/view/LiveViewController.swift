@@ -105,7 +105,7 @@ class LiveViewController: UIViewController {
     
     @objc func finishedPlayingAr() {
         
-        self.button_ar.setImage(UIImage(named: "play-button.png"), for: UIControl.State.normal)
+        self.button_ar.setImage(UIImage(named: "playFlash.png"), for: UIControl.State.normal)
         let seconds : Int64 = 0
         let preferredTimeScale : Int32 = 1
         let seekTime : CMTime = CMTimeMake(value: seconds, timescale: preferredTimeScale)
@@ -115,7 +115,7 @@ class LiveViewController: UIViewController {
     
     @objc func finishedPlayingFr() {
         
-        self.button_fr.setImage(UIImage(named: "play-button.png"), for: UIControl.State.normal)
+        self.button_fr.setImage(UIImage(named: "playFlash.png"), for: UIControl.State.normal)
         let seconds : Int64 = 0
         let preferredTimeScale : Int32 = 1
         let seekTime : CMTime = CMTimeMake(value: seconds, timescale: preferredTimeScale)
@@ -226,12 +226,12 @@ class LiveViewController: UIViewController {
         if player?.rate == 0
         {
             player!.play()
-            button_ar.setImage(UIImage(named: "pause.png"), for: UIControl.State.normal)
+            button_ar.setImage(UIImage(named: "pauseFlash.png"), for: UIControl.State.normal)
             
         } else {
             player!.pause()
             
-            button_ar.setImage(UIImage(named: "play-button.png"), for: UIControl.State.normal)
+            button_ar.setImage(UIImage(named: "playFlash.png"), for: UIControl.State.normal)
         }
     }
     
@@ -240,12 +240,12 @@ class LiveViewController: UIViewController {
         if playerFr?.rate == 0
         {
             playerFr!.play()
-            button_fr.setImage(UIImage(named: "pause.png"), for: UIControl.State.normal)
+            button_fr.setImage(UIImage(named: "pauseFlash.png"), for: UIControl.State.normal)
             
         } else {
             playerFr!.pause()
             
-            button_fr.setImage(UIImage(named: "play-button.png"), for: UIControl.State.normal)
+            button_fr.setImage(UIImage(named: "playFlash.png"), for: UIControl.State.normal)
         }
     }
     
@@ -262,7 +262,7 @@ class LiveViewController: UIViewController {
         if player!.rate == 0
         {
             player?.play()
-            button_ar.setImage(UIImage(named: "pause.png"), for: UIControl.State.normal)
+            button_ar.setImage(UIImage(named: "pauseFlash.png"), for: UIControl.State.normal)
 
         }
         
@@ -279,7 +279,7 @@ class LiveViewController: UIViewController {
         if playerFr!.rate == 0
         {
             playerFr?.play()
-            button_fr.setImage(UIImage(named: "pause.png"), for: UIControl.State.normal)
+            button_fr.setImage(UIImage(named: "pauseFlash.png"), for: UIControl.State.normal)
             
         }
         
