@@ -20,21 +20,23 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnPlay: UIButton!
    
     // play et pause ok
-    @IBAction func btnn(_ sender: Any) {
+    @IBAction func btnn(_ sender: UIButton) {
         if player?.rate == 0
         {
+            sender.pulsastion()
             player!.play()
             btnPlay.setImage(UIImage(named: "pause.png"), for: UIControl.State.normal)
         } else {
             player!.pause()
-            
+            sender.pulsastion()
              btnPlay.setImage(UIImage(named: "play-button.png"), for: UIControl.State.normal)
         }
         
     }
     
     // stop ok
-    @IBAction func button_stop(_ sender: Any) {
+    @IBAction func button_stop(_ sender: UIButton) {
+        sender.pulsastion()
         player?.replaceCurrentItem(with: nil) // stop AVPlayer avant lancer un nouveau player
         btnPlay.setImage(UIImage(named: "play-button.png"), for: UIControl.State.normal)
         let url = NSURL(string: station.streamURL)
@@ -86,6 +88,13 @@ class ViewController: UIViewController {
         player = AVPlayer(playerItem: playerItem!)
         player!.play()*/
         initialPlayerAndPlay()
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch {
+            print(error)
+        }
     }
     
     func initialPlayerAndPlay() {

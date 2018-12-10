@@ -42,7 +42,7 @@ class LiveViewController: UIViewController {
         button_menu.target = revealViewController()
         button_menu.action = #selector(SWRevealViewController.revealToggle(_:))
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        
+    
         getAudioAr()
         getAudioFr()
         debutTemps.text = "00:00"
@@ -157,10 +157,9 @@ class LiveViewController: UIViewController {
         guard let minsStrs = timeformatter.string(from: NSNumber(value: minss)), let secsStrs = timeformatter.string(from: NSNumber(value: secss)) else {
             return
         }
-        if finTemps.text != nil {
+       
         finTemps.text = "\(minsStrs).\(secsStrs)"
-        }
-        finTemps.text = "00:00"
+       
     }
     
     
@@ -195,10 +194,7 @@ class LiveViewController: UIViewController {
         guard let minsStrs = timeformatter.string(from: NSNumber(value: minss)), let secsStrs = timeformatter.string(from: NSNumber(value: secss)) else {
             return
         }
-        if finTempsFr.text != nil {
-        finTempsFr.text = "\(minsStrs).\(secsStrs)"
-        }
-        finTempsFr.text = "00:00"
+        finTempsFr.text = "\(minsStrs).\(secsStrs)"       
     }
     
   /*  func finishedPlaying(myNotification:NSNotification) {

@@ -57,7 +57,7 @@ class ContactViewController: UIViewController,MFMailComposeViewControllerDelegat
     
     @IBAction func send(_ sender: Any) {
         print("ok")
-        let toRecipient = ["kamal-jojo@hotmail.com"]
+        let toRecipient = ["40600@etu.he2b.be"]
         let mc: MFMailComposeViewController = MFMailComposeViewController()
         mc.mailComposeDelegate = self
         mc.setToRecipients(toRecipient)
