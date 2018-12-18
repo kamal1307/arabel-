@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import AVFoundation
 import MediaPlayer
+
 class ViewController: UIViewController {
 
     var playerItem : AVPlayerItem?
@@ -83,10 +83,6 @@ class ViewController: UIViewController {
         
         loadDataFromJSON()
         setupText()
-       /* let url = NSURL(string: station.streamURL)
-        playerItem = AVPlayerItem(url: url! as URL)
-        player = AVPlayer(playerItem: playerItem!)
-        player!.play()*/
         initialPlayerAndPlay()
         
         do {
@@ -95,9 +91,14 @@ class ViewController: UIViewController {
         } catch {
             print(error)
         }
+      
     }
     
+    
+  
+    
     func initialPlayerAndPlay() {
+        
         let url = NSURL(string: station.streamURL)
         playerItem = AVPlayerItem(url: url! as URL)
         player = AVPlayer(playerItem: playerItem!)
@@ -106,10 +107,13 @@ class ViewController: UIViewController {
     }
     
     func viewWillAppear(animated: Bool) {
+        
         NotificationCenter.default.addObserver(self, selector: Selector(("finishedPlaying:")), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: playerItem)
+        
     }
     
     func viewWillDisappear(animated: Bool) {
+        
         NotificationCenter.default.removeObserver(self)
     }
     

@@ -19,6 +19,7 @@
 		8426124021A5762A0022B0CD /* ProgammationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426123F21A5762A0022B0CD /* ProgammationCell.swift */; };
 		8426124421A57F3E0022B0CD /* RadioStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426124321A57F3E0022B0CD /* RadioStation.swift */; };
 		8426177521A3263800852B3C /* PodcastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426177421A3263800852B3C /* PodcastCell.swift */; };
+		842EEE6E21BFF925003EBE47 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842EEE6D21BFF924003EBE47 /* AVKit.framework */; };
 		842F76A721A6C08100FE95AC /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F76A621A6C08100FE95AC /* InfoViewController.swift */; };
 		842F76A921A6DA5100FE95AC /* stations.json in Resources */ = {isa = PBXBuildFile; fileRef = 842F76A821A6DA5100FE95AC /* stations.json */; };
 		8430D23121B14A660033D8E5 /* Programmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8430D23021B14A660033D8E5 /* Programmation.swift */; };
@@ -59,6 +60,7 @@
 		8426123F21A5762A0022B0CD /* ProgammationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgammationCell.swift; sourceTree = "<group>"; };
 		8426124321A57F3E0022B0CD /* RadioStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioStation.swift; sourceTree = "<group>"; };
 		8426177421A3263800852B3C /* PodcastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastCell.swift; sourceTree = "<group>"; };
+		842EEE6D21BFF924003EBE47 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		842F76A621A6C08100FE95AC /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		842F76A821A6DA5100FE95AC /* stations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stations.json; sourceTree = "<group>"; };
 		8430D23021B14A660033D8E5 /* Programmation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Programmation.swift; sourceTree = "<group>"; };
@@ -74,7 +76,6 @@
 		845C4AD421AEF90000BA4509 /* SportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportViewController.swift; sourceTree = "<group>"; };
 		845C4AD621AEF90B00BA4509 /* FootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootViewController.swift; sourceTree = "<group>"; };
 		845C4AD821AEF91C00BA4509 /* DarlikViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarlikViewController.swift; sourceTree = "<group>"; };
-		846AE00E21BD76F300D6145A /* arabelFM1.0.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = arabelFM1.0.entitlements; sourceTree = "<group>"; };
 		847F05C921B6EF800049E4B9 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		84A37BB921BB5A6F00390B71 /* UIbuttinExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIbuttinExtension.swift; path = view/UIbuttinExtension.swift; sourceTree = "<group>"; };
 		84B447E2215CBEC900658B62 /* arabelFM1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = arabelFM1.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842EEE6E21BFF925003EBE47 /* AVKit.framework in Frameworks */,
 				847F05CA21B6EF800049E4B9 /* iAd.framework in Frameworks */,
 				841AE00121B6AB76006C9BA5 /* MessageUI.framework in Frameworks */,
 				845C4AC321AED7CB00BA4509 /* WebKit.framework in Frameworks */,
@@ -141,7 +143,6 @@
 		84B447E4215CBEC900658B62 /* arabelFM1.0 */ = {
 			isa = PBXGroup;
 			children = (
-				846AE00E21BD76F300D6145A /* arabelFM1.0.entitlements */,
 				84B447E5215CBEC900658B62 /* AppDelegate.swift */,
 				84B447E7215CBEC900658B62 /* ViewController.swift */,
 				84B447E9215CBEC900658B62 /* Main.storyboard */,
@@ -162,6 +163,7 @@
 		84D0A3EC21AD3C1B005F1115 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				842EEE6D21BFF924003EBE47 /* AVKit.framework */,
 				847F05C921B6EF800049E4B9 /* iAd.framework */,
 				841AE00021B6AB76006C9BA5 /* MessageUI.framework */,
 				845C4AC221AED7CB00BA4509 /* WebKit.framework */,

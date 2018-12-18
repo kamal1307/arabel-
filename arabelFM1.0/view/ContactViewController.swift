@@ -56,16 +56,41 @@ class ContactViewController: UIViewController,MFMailComposeViewControllerDelegat
     
     
     @IBAction func send(_ sender: Any) {
-        print("ok")
-        let toRecipient = ["40600@etu.he2b.be"]
-        let mc: MFMailComposeViewController = MFMailComposeViewController()
-        mc.mailComposeDelegate = self
-        mc.setToRecipients(toRecipient)
-        mc.setSubject(nameField.text!)
-        mc.setMessageBody("Nom: \(nameField.text!) \n\nPrénom: \(lastNameField.text!) \n\nEmail: \(emailField.text!) \n\nMessage: \(msgFIeld.text!)" , isHTML: false)
+        if MFMailComposeViewController.canSendMail() {
+            
+            print("ok")
+            let mc: MFMailComposeViewController = MFMailComposeViewController()
+             let toRecipient = ["39801@etu.he2b.be"]
+            mc.mailComposeDelegate = self
+            mc.setToRecipients(toRecipient)
+            mc.setSubject("message pour arabel")
+            mc.setMessageBody("Nom: \(nameField.text!) \n\nPrénom: \(lastNameField.text!) \n\nEmail: \(emailField.text!) \n\nMessage: \(msgFIeld.text!)" , isHTML: false)
+            
+            self.present(mc, animated: true, completion: nil)
+        }
+       
         
-        self.present(mc, animated: true, completion: nil)
-        
+    }
+    
+    // résou le bug rencontrer lors de l'envoi ou supprimer mail car la page reste figé et disparait pas
+    // ajout de méthode pour envoyer ou supprimer , enregistrer le mail
+  
+    func mailComposeController(controller: MFMailComposeViewController,
+                               didFinishWithResult result: MFMailComposeResult, error: Error?) {
+        switch result.rawValue {
+        case MFMailComposeResult.cancelled.rawValue:
+            print("Mail cancelled")
+        case MFMailComposeResult.saved.rawValue:
+            print("Mail saved")
+        case MFMailComposeResult.sent.rawValue:
+            print("Mail sent")
+        case MFMailComposeResult.failed.rawValue:
+            print("Mail sent failure: %@", [error!.localizedDescription])
+        default:
+            break
+        }
+        // Dismiss the mail compose view controller.
+        controller.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func dismissKeyboard(_ sender: Any) {
