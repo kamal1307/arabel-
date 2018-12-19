@@ -18,6 +18,7 @@ class ProgrammationViewController: UIViewController, UITableViewDelegate, UITabl
     var timeTab: [String] = []
     var prog:Programmation!
     
+    /// charge les données en mémoire.
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,11 +36,14 @@ class ProgrammationViewController: UIViewController, UITableViewDelegate, UITabl
         icnImge = [UIImage(named: "mondher")!,UIImage(named: "equipe")!,UIImage(named: "majdou")!,UIImage(named: "tarik")!,UIImage(named: "ahmed")!,UIImage(named: "darrez")!,UIImage(named: "jamal")!,UIImage(named: "ahmed")!,UIImage(named: "majdousister")!,UIImage(named:"jordi")!,UIImage(named: "ahmed")!,UIImage(named: "chater")!]
     }
     
+    /// retourne les différentes variables pour chaque ligne du tableView.
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return nameTab.count
     }
     
+    /// retourne les différentes variables pour chaque ligne du tableView.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ProgammationCell
@@ -49,6 +53,7 @@ class ProgrammationViewController: UIViewController, UITableViewDelegate, UITabl
             return cell
     }
     
+    /// retourne l'espace désirer entre chaque ligne.
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if indexPath.row == 0 {
@@ -60,6 +65,7 @@ class ProgrammationViewController: UIViewController, UITableViewDelegate, UITabl
         }
     }
     
+    /// charge les données depuis le fichier Json.
     func loadDataFromJSON() {
         prog = Programmation("", "")
         var title: String!

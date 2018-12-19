@@ -13,12 +13,13 @@ class PodcastCell: UITableViewCell {
     @IBOutlet weak var imgPodcast: UIImageView!
     @IBOutlet weak var labelPodcast: UILabel!
     
-    
+     /// voir documentation apple
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
+     ///  voir documentation apple
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

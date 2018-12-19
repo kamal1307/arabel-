@@ -19,7 +19,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var button_menu: UIBarButtonItem!
     @IBOutlet weak var btnPlay: UIButton!
    
-    // play et pause ok
+    /**
+        Cette méthode permet de controler le flux audio, donc l'arrêt et la reprise.
+     
+        - Parameter sender: l'action du bouton
+    */
     @IBAction func btnn(_ sender: UIButton) {
         if player?.rate == 0
         {
@@ -34,7 +38,13 @@ class ViewController: UIViewController {
         
     }
     
-    // stop ok
+    
+    
+    /**
+     Cette méthode permet d'arrêter complétement le flux audio.
+     
+     - Parameter sender: l'action du bouton
+     */
     @IBAction func button_stop(_ sender: UIButton) {
         sender.pulsastion()
         player?.replaceCurrentItem(with: nil) // stop AVPlayer avant lancer un nouveau player
@@ -43,37 +53,59 @@ class ViewController: UIViewController {
         playerItem = AVPlayerItem(url: url! as URL)
         player = AVPlayer(playerItem: playerItem!)
     }
-    // redérige vers facebook
+   
+    /**
+     Cette méthode redirige l'utilisateur vers le réseau social facebook.
+     
+     - Parameter sender: l'action du bouton
+     */
     @IBAction func btnFacebook(_ sender: Any) {
         
         guard let url = URL(string: "https://www.facebook.com/AraBel.fm/") else { return }
         UIApplication.shared.open(url)
     }
-    //redérige vers instagram
+    
+    /**
+     Cette méthode redirige l'utilisateur vers le réseau social instagram.
+     
+     - Parameter sender: l'action du bouton
+     */
+    
     @IBAction func btnInstagram(_ sender: Any) {
         
         guard let url = URL(string: "https://www.instagram.com/arabelfm/") else { return }
         UIApplication.shared.open(url)
     }
-    //redérige vers youtube
+    
+    /**
+     Cette méthode redirige l'utilisateur vers youtube.
+     
+     - Parameter sender: l'action du bouton
+     */
     @IBAction func btnYoutube(_ sender: Any) {
         
         guard let url = URL(string: "https://www.youtube.com/user/AraBelFM") else { return }
         UIApplication.shared.open(url)
     }
     
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "Info", let infoController = segue.destination as? InfoViewController else { return }
         infoController.station = station
       
     }
-    
+
+    /**
+     Cette méthode redirige vers l'interface InfoViewController.
+     
+     - Parameter sender: l'action du bouton
+     */
     @IBAction func btnInfo(_ sender: Any) {
         
         performSegue(withIdentifier: "Info", sender: self)
     }
     
-    
+    /// Appelé après que la vue du contrôleur soit chargée en mémoire.
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -93,10 +125,7 @@ class ViewController: UIViewController {
         }
       
     }
-    
-    
-  
-    
+    /// Cette méthode initialise le flux audio.
     func initialPlayerAndPlay() {
         
         let url = NSURL(string: station.streamURL)
@@ -106,21 +135,33 @@ class ViewController: UIViewController {
          btnPlay.setImage(UIImage(named: "pause.png"), for: UIControl.State.normal)
     }
     
+    /**
+     Notifie le contrôleur de vue que sa vue est sur le point d'être ajoutée à une hiérarchie de vues.
+     
+     - Parameter animated: toutes les animations sont configurées pour montrer la vue. Si c'est vrai, la vue est ajoutée à la fenêtre à l'aide d'une animation
+     */
     func viewWillAppear(animated: Bool) {
         
         NotificationCenter.default.addObserver(self, selector: Selector(("finishedPlaying:")), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: playerItem)
         
     }
-    
+
+    /**
+     Notifie le contrôleur de vue que sa vue est sur le point d'être supprimée d'une hiérarchie de vues.
+     
+     - Parameter animated: toutes les animations sont configurées pour montrer la vue. Si vrai, la disparition de la vue est en cours d'animation
+     */
     func viewWillDisappear(animated: Bool) {
         
         NotificationCenter.default.removeObserver(self)
     }
     
+    /// afficher le slogo d'arabel
     func setupText() {
         labelSubtitle.text = station.desc
     }
     
+    /// Permer de charger les données du fichier Json
     func loadDataFromJSON() {
         var name: String!
         var stream: String!
@@ -157,6 +198,11 @@ class ViewController: UIViewController {
         
     }
     
+    /**
+     Cette méthode  permet de changer l'animation du bouton. Elle est enregistrer comme observeur par la fonction viewWillAppear
+     
+     - Parameter myNotifiction: Un objet contenant des informations diffusées à des observateurs enregistrés qui se connectent à Notification. On utilise NSNotification lorsqu'on a  besoin d'une sémantique de référence ou d'un autre comportement spécifique à la fondation.
+     */
     func finishedPlaying(myNotification:NSNotification) {
         btnPlay.setImage(UIImage(named: "play-button.png"), for: UIControl.State.normal)
         

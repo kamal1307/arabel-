@@ -12,6 +12,7 @@ class MagViewController: UIViewController {
 
     @IBOutlet weak var button_menu: UIBarButtonItem!
     
+    /// charge les données en mémoire.
     override func viewDidLoad() {
         super.viewDidLoad()
 

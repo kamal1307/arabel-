@@ -13,7 +13,8 @@ class FootViewController: UIViewController {
 
     @IBOutlet weak var button_menu: UIBarButtonItem!
     @IBOutlet weak var podcast: WKWebView!
-    
+  
+    /// charge les données en mémoire.
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,6 +25,7 @@ class FootViewController: UIViewController {
         loadPage()
     }
     
+    /// Charge le podcast de l'émission en question
     func loadPage() {
         
         let url = URL(string: "https://soundcloud.com/arabelfm/sets/arabel-fm-le-foot-autrement")

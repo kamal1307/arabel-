@@ -16,6 +16,7 @@ class PodcastViewController: UIViewController, UITableViewDelegate, UITableViewD
     var icnImg:Array = [UIImage]()
     var menuPodcastPlayList:Array = [String]()
     
+    /// charge les données en mémoire.
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,11 +33,13 @@ class PodcastViewController: UIViewController, UITableViewDelegate, UITableViewD
        
     }
     
+    /// retourne le nombre d'élement qui constitue le tableView.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return menuAr.count
     }
     
+     /// retourne les différentes variables pour chaque ligne du tableView.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! PodcastCell
@@ -45,14 +48,15 @@ class PodcastViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
     
+     /// retourne l'espace désirer entre chaque ligne.
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return 110
      
     }
     
+    /// redirection sur l'interface désirer en choisissant la ligne en question.
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-      
         self.performSegue(withIdentifier: menuPodcastPlayList[indexPath.row], sender: self)
         
     }

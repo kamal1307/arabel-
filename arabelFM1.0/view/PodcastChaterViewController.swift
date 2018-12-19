@@ -14,6 +14,7 @@ class PodcastChaterViewController: UIViewController {
     @IBOutlet weak var button_menu: UIBarButtonItem!
      @IBOutlet weak var podcastPlaylist: WKWebView!
 
+    /// charge les données en mémoire.
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,6 +26,7 @@ class PodcastChaterViewController: UIViewController {
         loadPage()
     }
     
+    /// Charge le podcast de l'émission en question
     func loadPage() {
         
         let url = URL(string: "https://soundcloud.com/arabelfm/sets/fajr-arabel")

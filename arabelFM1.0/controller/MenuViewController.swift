@@ -14,6 +14,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     var menuArray:Array = [String]()
     var iconImg:Array = [UIImage]()
     
+    /// charge les données en mémoire
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,11 +24,13 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
+    /// retourne le nombre d'élement qui constitue le tableView.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return menuArray.count
     }
     
+    /// retourne les différentes variables pour chaque ligne du tableView.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell") as! MenuTableViewCell
@@ -36,13 +39,13 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
+    /// retourne l'espace désirer entre chaque ligne.
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         return 60
     }
     
-
-    
+    /// permet d'afficher le logo arabel en coupé sur le header du menu.
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
   
         if section == 0 {
@@ -59,16 +62,14 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     }
     
+    
     func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    //tester encore sur iphone
-    @IBAction func smsShow(_ sender: Any) {
-        let number = "sms:+12345678901"
-        UIApplication.shared.openURL(NSURL(string: number)! as URL)
-    }
-    
+    /// ouvre l'application message avec le numéro du déstinataire ansi qu'un début de message
+    ///
+    /// - Parameter sender: <#sender description#>
     @IBAction func sendMsg(_ sender: Any) {
         
         if MFMessageComposeViewController.canSendText() {
@@ -81,10 +82,8 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
             print("Teste on iphone")
         }
     }
-    
-   
-   // self.button_ar.setImage(UIImage(named: "play-button.png"), for: UIControl.State.normal)
-    
+
+    ///  /// redirection sur l'interface podcast désirer en choisissant l'émission en quetion.
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        // let revealviewcontroller:SWRevealViewController = self.revealViewController()
         self.performSegue(withIdentifier: menuArray[indexPath.row], sender: self)

@@ -34,7 +34,7 @@ class LiveViewController: UIViewController {
     @IBOutlet weak var debutTempsFr: UILabel!
     @IBOutlet weak var finTempsFr: UILabel!
     
-    
+    /// Charge le podcast de l'émission en question.
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -50,6 +50,7 @@ class LiveViewController: UIViewController {
       
     }
     
+    /// instancie la rediffusion flash en arabe.
     func getAudioAr() {
         
         let url = NSURL(string: "https://www.arabel.fm/infoauto/last-flash-AR.mp3")
@@ -66,6 +67,7 @@ class LiveViewController: UIViewController {
         
     }
     
+    /// instancie la rediffusion flash en français.
     func getAudioFr() {
         
         let url = NSURL(string: "https://www.arabel.fm/infoauto/last-flash-FR.mp3")
@@ -82,6 +84,11 @@ class LiveViewController: UIViewController {
         
     }
     
+    /**
+     Notifie le contrôleur de vue que sa vue est sur le point d'être ajoutée à une hiérarchie de vues.
+     
+     - Parameter animated: toutes les animations sont configurées pour montrer la vue. Si c'est vrai, la vue est ajoutée à la fenêtre à l'aide d'une animation
+     */
       override func viewWillAppear(_ animated: Bool) {
         
      super.viewWillAppear(animated)
@@ -91,6 +98,11 @@ class LiveViewController: UIViewController {
      
      }
     
+    /**
+     Notifie le contrôleur de vue que sa vue est sur le point d'être supprimée d'une hiérarchie de vues.
+     
+     - Parameter animated: toutes les animations sont configurées pour montrer la vue. Si vrai, la disparition de la vue est en cours d'animation
+     */
      override func viewWillDisappear(_ animated: Bool) {
         
      super.viewWillAppear(animated)
@@ -103,6 +115,7 @@ class LiveViewController: UIViewController {
      }
     
     
+     /// permet de changer l'animation du bouton. Elle est enregistrer comme observeur par la fonction viewWillAppear.
     @objc func finishedPlayingAr() {
         
         self.button_ar.setImage(UIImage(named: "playFlash.png"), for: UIControl.State.normal)
@@ -113,6 +126,7 @@ class LiveViewController: UIViewController {
         playerItem!.seek(to: seekTime)
     }
     
+    /// permet de changer l'animation du bouton. Elle est enregistrer comme observeur par la fonction viewWillAppear.
     @objc func finishedPlayingFr() {
         
         self.button_fr.setImage(UIImage(named: "playFlash.png"), for: UIControl.State.normal)
@@ -124,6 +138,7 @@ class LiveViewController: UIViewController {
     }
 
     
+    /// Permet de mettre à jour  le slider de déplacement à jour avec le flux audio arabe ainsi que le temps écoulé.
     @objc func audioSliderUpdate() {
         
         let currentTime : CMTime = (self.playerItem?.currentTime())!
@@ -146,7 +161,6 @@ class LiveViewController: UIViewController {
         debutTemps.text = "\(minsStr).\(secsStr)"
         
         let currentTimeInSecondss = CMTimeGetSeconds((player?.currentItem?.duration)!)
-        // 2 Alternatively, you could able to get current time from `currentItem` - videoPlayer.currentItem.duration
         
         let minss = currentTimeInSecondss / 60
         let secss = currentTimeInSecondss.truncatingRemainder(dividingBy: 60)
@@ -162,7 +176,7 @@ class LiveViewController: UIViewController {
        
     }
     
-    
+    /// Permet de mettre à jour  le slider de déplacement à jour avec le flux audio français ainsi que le temps écoulé.
     @objc func audioSliderUpdateFr() {
         
         let currentTime : CMTime = (self.playerItemFr?.currentTime())!
@@ -171,7 +185,6 @@ class LiveViewController: UIViewController {
         self.trackSliderFr.value = time
         
         let currentTimeInSeconds = CMTimeGetSeconds((playerFr?.currentTime())!)
-        // 2 Alternatively, you could able to get current time from `currentItem` - videoPlayer.currentItem.duration
         
         let mins = currentTimeInSeconds / 60
         let secs = currentTimeInSeconds.truncatingRemainder(dividingBy: 60)
@@ -196,15 +209,10 @@ class LiveViewController: UIViewController {
         }
         finTempsFr.text = "\(minsStrs).\(secsStrs)"       
     }
-    
-  /*  func finishedPlaying(myNotification:NSNotification) {
-        
-        button_ar.setImage(UIImage(named: "play-button.png"), for: UIControl.State.normal)
-        let stopedPlayerItem: AVPlayerItem = myNotification.object as! AVPlayerItem
-        stopedPlayerItem.seek(to: CMTime.zero)
-    }*/
-    
-    
+
+    /// lance la vidéo d'arabel en direct.
+    ///
+    /// - Parameter sender: l'action du bouton
     @IBAction func liveStream(_ sender: Any) {
         
         let url = URL(string: "https://livevideo.infomaniak.com/streaming/livecast/arabelfmendirect/playlist.m3u8")
@@ -217,6 +225,9 @@ class LiveViewController: UIViewController {
     }
     
     
+    /// Controle le flux audio arabe.
+    ///
+    /// - Parameter sender: l'action du bouton
     @IBAction func streamAr(_ sender: Any) {
         
         if player?.rate == 0
@@ -231,6 +242,9 @@ class LiveViewController: UIViewController {
         }
     }
     
+    /// Controle le flux audio français
+    ///
+    /// - Parameter sender: l'action du bouton
     @IBAction func streamFr(_ sender: Any) {
         
         if playerFr?.rate == 0
@@ -246,6 +260,9 @@ class LiveViewController: UIViewController {
     }
     
     
+    /// Permet de déplacer le slider où l'on veut et la reprise du flux audio arabe se fait instantanément.
+    ///
+    /// - Parameter sender: l'action du bouton
     @IBAction func changeTrack(_ sender: Any) {
         
         trackSlider.isContinuous = true
@@ -264,6 +281,9 @@ class LiveViewController: UIViewController {
         
     }
     
+    /// Permet de déplacer le slider où l'on veut et la reprise du flux audio francais se fait instantanément.
+    ///
+    /// - Parameter sender: l'action du bouton
     @IBAction func changeTrackFr(_ sender: Any) {
         
          trackSliderFr.isContinuous = true

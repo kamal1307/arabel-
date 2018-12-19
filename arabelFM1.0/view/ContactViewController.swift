@@ -12,9 +12,6 @@ import MessageUI
 
 
 class ContactViewController: UIViewController,MFMailComposeViewControllerDelegate {
-    
-   
-    
 
     @IBOutlet weak var button_menu: UIBarButtonItem!
     
@@ -23,9 +20,9 @@ class ContactViewController: UIViewController,MFMailComposeViewControllerDelegat
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var msgFIeld: UITextField!
     
-    
-    
+    /// Charge les données en mémoire.
     override func viewDidLoad() {
+        
         super.viewDidLoad()
        
         button_menu.target = revealViewController()
@@ -35,7 +32,9 @@ class ContactViewController: UIViewController,MFMailComposeViewControllerDelegat
         
     }
     
-    
+    /// Lance l'application Maps avec la localisation de la station radio en appuyant sur l'adresse
+    ///
+    /// - Parameter sender: l'action du bouton
     @IBAction func showMap(_ sender: Any) {
         
         // for destination
@@ -55,7 +54,11 @@ class ContactViewController: UIViewController,MFMailComposeViewControllerDelegat
     }
     
     
+    /// Lance l'application Mail avec les champs déjà pré-remplie par rapport aux informations introduites.
+    ///
+    /// - Parameter sender: l'action du bouton
     @IBAction func send(_ sender: Any) {
+        
         if MFMailComposeViewController.canSendMail() {
             
             print("ok")
@@ -67,6 +70,7 @@ class ContactViewController: UIViewController,MFMailComposeViewControllerDelegat
             mc.setMessageBody("Nom: \(nameField.text!) \n\nPrénom: \(lastNameField.text!) \n\nEmail: \(emailField.text!) \n\nMessage: \(msgFIeld.text!)" , isHTML: false)
             
             self.present(mc, animated: true, completion: nil)
+            
         }
        
         
@@ -77,6 +81,7 @@ class ContactViewController: UIViewController,MFMailComposeViewControllerDelegat
   
     func mailComposeController(controller: MFMailComposeViewController,
                                didFinishWithResult result: MFMailComposeResult, error: Error?) {
+        
         switch result.rawValue {
         case MFMailComposeResult.cancelled.rawValue:
             print("Mail cancelled")
@@ -89,10 +94,14 @@ class ContactViewController: UIViewController,MFMailComposeViewControllerDelegat
         default:
             break
         }
-        // Dismiss the mail compose view controller.
+     
         controller.dismiss(animated: true, completion: nil)
+        
     }
     
+    /// Permet d'afficher le clavier ainsi que le faire disparaitre une fois le champ édité.
+    ///
+    /// - Parameter sender: l'action de l'appui sur le champs d'édition
     @IBAction func dismissKeyboard(_ sender: Any) {
         
         self.resignFirstResponder()

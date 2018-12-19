@@ -13,13 +13,14 @@ class MenuTableViewCell: UITableViewCell {
     @IBOutlet weak var imageIcon: UIImageView!
     @IBOutlet weak var label_Menu: UILabel!
  
-    
+     /// voir documentation apple
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
             
     }
 
+     /// voir documentation apple
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

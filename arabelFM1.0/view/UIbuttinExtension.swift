@@ -8,8 +8,10 @@
 
 import UIKit
 
+/// c'est Un contrôle qui exécute le  code personnalisé en réponse aux interactions de l'utilisateur.
 extension UIButton {
     
+    /// Cette fonction permet de donner un effet de pulsastion au bouton.
     func pulsastion() {
         
         let pulse = CASpringAnimation(keyPath: "transform.scale")

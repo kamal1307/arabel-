@@ -17,6 +17,7 @@ class InfoViewController: UIViewController {
     
     @IBOutlet weak var labelDesc: UITextView!
     
+    /// charge les données en mémoire.
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,12 +25,16 @@ class InfoViewController: UIViewController {
         setupStationText()
     }
     
+    /// afficher les différentes  les données réçu à partir de l'interface viewController.
     func setupStationText() {
         labelText.text = station.name
         labelSubtitle.text = station.desc
         labelDesc.text = station.longDesc
     }
 
+    /// Permet de revenir à l'interface précèdente.
+    ///
+    /// - Parameter sender: l'action du bouton
     @IBAction func backHome(_ sender: Any) {
         
         _ = navigationController?.popViewController(animated: true)
